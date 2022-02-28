@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    background-color: antiquewhite;
+    margin: 0px;
+  }
+
+  .header {
+    color: white;
+    background-color: rgb(75, 103, 119);
+    padding: 10px 20px 10px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 25px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 10px;
+  }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: baseline;
+    padding-left: 5px;
+  }
+
+  .painting {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    padding-top: 100px;
+    padding-right: 10px;
+  }
+
+  img
+  {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .description {
+    text-align: center;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Žymus dailininkai: van Gogas, da Vinčis, Dali, Pikasas" />
+  <title>Dailininkai</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Žymūs dailininkai</h1>
+    <p>
+      <span>Visų laikų žinomų dailininkų ir jų paveikslų pristatymas</span>
+    </p>
+  </div>
+  <section>
+    <div class="author">
+      <h2>Vincentas van Gogas</h2>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/VanGogh_1887_Selbstbildnis.jpg/300px-VanGogh_1887_Selbstbildnis.jpg"
+        alt="van Gogas" title="van Gogas" />
+    </div>
+    <div class="painting">
+      <div>
+        <img src="./bulviuValgytojai.jpg" alt="bulviuValgytojai" />
+        <div class="description">
+          Žymus paveikslas <cite>bulvių valgytojai</cite>.
+        </div>
+      </div>
+      <div>
+        <img src="https://place-hold.it/300x250/f00/fff/00f" alt="" />
+        <div class="description">Žymus paveikslas <s>be pavadinimo</s>.</div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section>
+    <div class="author">
+      <h2>Leonardas da Vinčis</h2>
+      <img src="./Leonardas.jpg" alt="Leonardas da Vinci portret" title="Leonardas da Vinci" />
+    </div>
+    <div class="painting">
+      <div>
+        <!-- su place-hold.it visi stiliaus pasirinkimai veikia, bet nepasirašo tekstas su atskirais žodžiais ir lietuviškom raidėm, su "+" ir %20 taip pat neišeina -->
+        <img src="https://place-hold.it/300x400/999/f0f/f00&text=Kristauskrikstas&fontsize=25&italic&bold" alt="" />
+        <div class="description">
+          Žymus paveikslas <cite>Kristaus krikštas</cite>.
+        </div>
+      </div>
+      <div>
+        <img src="https://place-hold.it/300x400/f00/fff/00f" alt="" />
+        <div class="description">Žymus paveikslas <s>be pavadinimo</s>.</div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section>
+    <div class="author">
+      <h2>Pablas Pikasas</h2>
+      <img src="./pabloPikaso.jpg" alt="Pablo Pikaso portret" title="Pablo Pikaso" />
+    </div>
+    <div class="painting">
+      <div>
+        <img src="https://via.placeholder.com/300/666/f00&text=Mergaitė skaito prie stalo" alt="" />
+        <div class="description">
+          Žymus paveikslas <cite>Mergaitė skaito prie stalo</cite>.
+        </div>
+      </div>
+      <div>
+        <!-- su via.paceholder neveikia bold, italic, fontsize ir teksto fono splava-->
+        <img src="https://via.placeholder.com/300/666/f00&text=paveikslas" alt="" />
+        <div class="description">Žymus paveikslas <s>be pavadinimo</s>.</div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section>
+    <div class="author">
+      <h2>Salvadroas Dali</h2>
+      <img src="./salvadorDali.jpg" alt="Salvador Dali portret" />
+    </div>
+    <div class="painting">
+      <div>
+        <img src="https://place-hold.it/300/f00/fff/00f" alt="" />
+        <div class="description">Žymus paveikslas <s>be pavadinimo</s>.</div>
+      </div>
+      <div>
+        <img src="https://place-hold.it/300/f00/fff/00f.png" alt="" />
+        <div class="description">Žymus paveikslas <s>be pavadinimo</s>.</div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

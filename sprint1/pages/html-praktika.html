@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alina's_Blog Practical HTML</title>
+  <meta name="description" content="My first blog page about programming" />
+  <link rel="canonical" href="https://alinapak.github.io/BitHTML/Sprint1/Pages/html-praktika.html" />
+
+  <meta property="og:url" content="https://alinapak.github.io/BitHTML/Sprint1/Pages/html-praktika.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="My first blog page title" />
+  <meta property="og:description" content="My first blog page description" />
+  <meta property="og:image" content="https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My first blog page twitter title" />
+  <meta name="twitter:description" content="My first blog page twitter description" />
+  <meta property="twitter:url" content="https://alinapak.github.io/BitHTML/Sprint1/Pages/html-praktika.html" />
+  <meta property="twitter:image" content="https://pbs.twimg.com/media/Dw_0zPdVsAA6GsK.jpg" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YCP1VZFPEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YCP1VZFPEN');
+</script>
+</head>
+
+<body>
+  <header>
+    <figure>
+      <img id="header-img" src="../img/codingLogo.png" alt="coding_logo"/>
+    </figure>
+    <div id="header-div">
+      <h1>Alinos blog'as</h1>
+      <p>Dalinuosi žiniomis, skirtomis pradedantiesiems programuotojams</p>
+    </div>
+  </header>
+  <hr/>
+  <nav id="nav-bar">
+    <ul>
+      <li><a href="https://alinapak.github.io/BitHTML/Sprint1/Pages/blogHomePage.html">Home</a></li>
+      <li><a href="https://alinapak.github.io/BitHTML/Sprint1/Pages/aboutMe.html">Apie mane</a></li>
+      <li><a href="https://alinapak.github.io/BitHTML/Sprint1/Pages/coding.html">Apie programavimą</a></li>
+      <li><a href="https://alinapak.github.io/BitHTML/Sprint1/Pages/htmlMain.html">HTML</a></li>
+      <li><a href="https://alinapak.github.io/BitHTML/Sprint1/Pages/css.html">CSS</a></li>
+      <li><a href="https://alinapak.github.io/BitHTML/Sprint1/Pages/js.html">JS</a></li>
+   </ul>
+  </nav>
+  <section>
+    <h2>
+      HTML
+    </h2>
+    <h3>Šiek tiek praktikos</h3>
+    <div id="flex">
+      <div class="flex-item">
+        <p>Taigi kol kas tiek sausos teorijos. Pereikime prie praktikos, t.y. pačio kodo rašymo. Pateiksiu pavyzdį, kaip
+          įkelti paveikslėlį į, tarkime, kuriamą puslapį.</p>
+        <pre class="code"> &lt; img src="img/HTMLlogo.png" alt="HTML logo title="HTML logo" > </pre>
+        <p>Tokiu būdu įrašytas kodas į pasirinktą kodavimo programą (pvz. Visual Studio Code) arba paprastą <cite>Text
+            Document</cite> "failą", naršyklėje atrodo štai taip:</p>
+        <img style="width:200px" src="../img/HTMLlogo.png" alt="HTML logo" title="HTML logo"/>
+      </div>
+      <div class="flex-item">
+        <p>Būtina paminėti tai, kad img <cite>tagas</cite> yra savaime užsidarantis. Taip pat <b>img
+          </b><cite>tage</cite> esantys atributai <b>src, alt ir title</b> nurodo specifinius dalykus. <b>Src</b>
+          atributas nurodo paveikslėlio URL, t.y. kur paveikslėlis patalpintas. Šiuo konkrečiu atveju, paveikslėlis
+          paimtas iš lokalios direktorijos. Jei paveikslėlis būtų paimtas iš pačios naršyklės (tarkim rastas Google
+          paieškoje), jo atvaizdavimas kode atrodytų taip:</p>
+        <pre
+          class="code"> &lt; img src="https://domnabanakou.com/assets/img/about/html.jpg" alt="HTML logo" title="HTML logo"> </pre>
+
+        <p>Šiuo atveju <b>img</b> atribute <b>src</b> nurodytas adresas yra paimtas iš naršyklės (nukopijuotas vaizdo
+          adresas) ir įdėtas į <b>src</b> atributą. Naršyklėje vaizdas nesikeičia, nes paveikslėlis yra tas pats, tik
+          jis paimtas iš skirtingų nuorodų: lokalios direktorijos bei tiesiog iš Google vaizdų paieškos.</p>
+        <p><b>Img</b> atributas <b>alt</b> vartotojui nematomas tuomet, jei naršyklė užkrauna paveikslėlį (puslapio
+          lange matome norimą atvaizduoti paveikslėlį). Jei dėl kokių nors priežasčių paveikslėlis neužsikrauna
+          (tarkime, pasikeičia jo vaizo adresas), tuomet vietoj paveikslėlio matysime jo pavadinimą, atsisipindintį
+          <b>alt</b> atribute. T.y. <b>alt</b> atributas yra paveikslėlio "užvadinimas", kuris matomas vartotojui tokiu
+          atveju, jei naršyklėje neužsikraus paveikslėlis. o <b>title</b> atributas taip pat nurodo paveikslėlio
+          pavadinimą, tačiau jis matomas visuomet, kai vartotojas, esantis puslapyje, užveda pelę ant paveikslėlio.</p>
+      </div>
+    </div>
+  </section>
+  <hr/>
+  <footer>
+    <div id="social-links">
+      <a href="https://github.com/alinapak">GitHub </a>
+      <a href="https://facebook.com">Facebook </a>
+      <p> © 2022 Alina's_Blog </p>
+      </div>
+  </footer>
+</body>
+
+</html>

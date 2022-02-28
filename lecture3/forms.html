@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   header {
+      text-align: center;
+      margin-top: 50px;
+   }
+   header h1 {
+      color: rebeccapurple;
+   }
+   img {
+      max-width: 100%;
+   }
+   figure {
+      display: flex;
+      flex-direction: column;
+      /* flex-direction:row; */
+      /* justify-content: flex-end; */
+      align-items: flex-end;
+      /* width:100%;   */
+   }
+   #logo {
+      font-size: 12px;
+   }
+   nav {
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+   }
+   ul {
+      display: flex;
+      list-style: none;
+   }
+   ul a {
+      text-decoration: none;
+      color: rebeccapurple;
+   }
+   /* kaip sutraukti elementus, kad graziai lygiuotus phone mode */
+   ul a {
+      padding: 1em;
+   }
+   table {
+      /* font-family: arial, sans-serif; */
+      /* border-collapse: collapse; */
+      /* width: 100%; */
+   }
+   td,
+   th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      /* padding: 8px; */
+   }
+   tr th {
+      background-color: #dddddd;
+   }
+   /* table style copied and fixed individually */
+   #contacts {
+      text-align: center;
+      background-color: black;
+      color: white;
+   }
+   #pastas {
+      text-decoration: none;
+      color: red;
+      text-transform: uppercase;
+   }
+</style>
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Survey</title>
+</head>
+<body>
+   <header>
+      <h1>Apklausa</h1>
+      <figure>
+         <img src="https://www.unahealydesign.com/wp-content/uploads/2014/01/blog-logo-design-questionnaire.jpg"
+            alt="logo" width="500px" />
+         <figcaption id="logo">Apklausos logo</figcaption>
+      </figure>
+      <p>Apklausa, skirta programavimo įgūdžiams praktikuoti</p>
+   </header>
+   <nav id="nav-bar">
+      <ul id="nav-list">
+         <li>
+            <a href="#survey">Apklausa</a>
+         </li>
+         <li>
+            <a href="#survey-statistic">Apklausos statistika</a>
+         </li>
+         <li><a href="#contacts">Kontaktai</a></li>
+      </ul>
+   </nav>
+   <section id="personal-info">
+      <div id="ordered-list">
+         <p>Nurodykite savo duomenis tokia eilės tvarka:</p>
+         <ol>
+            <li>Vardas</li>
+            <li>Pavardė</li>
+            <li>Amžius</li>
+         </ol>
+      </div>
+      <div id="survey">
+         <form action="http://127.0.0.1:5500/paskaitos/p3/form.survey%20web.html#survey" method="post" target="_blank">
+            <!-- <form action="http://127.0.0.1:5500/paskaitos/p3/form.survey%20web.html#survey" method="get" target="_blank"> -->
+            <!-- su post neveikia, nes nėra tokios svetainės? -->
+            <!-- dar nesuprantu method post ir get skirtumu -->
+            <fieldset>
+               <label for="name">Vardas <br /></label>
+               <input type="text" id="name" name="name" required placeholder="Nurodykite savo vardą" />
+               <br />
+               <label for="surname">Pavardė</label>
+               <br />
+               <input type="text" id="surname" name="surname" required placeholder="Nurodykite savo pavardę" />
+               <br />
+               <label for="age">Amžius</label>
+               <br />
+               <input type="number" id="age" name="age" required placeholder="Nurodykite savo amžių" min="1"
+                  max="120" />
+               <br />
+            </fieldset>
+            <br />
+            <fieldset>
+               <label for="email">Jūsų el.paštas</label>
+               <br />
+               <input type="email" id="email" name="email" required placeholder="Nurodykite savo el.paštą" />
+               <br />
+               <label for="password">Sukurkite slaptažodį</label>
+               <br />
+               <input type="password" id="password" name="password" required
+                  placeholder="Įveskite bent vieną skaičių ar kitą simbolį" />
+               <br />
+            </fieldset>
+            <br />
+            <fieldset>
+               <label for="gender">Jūsų lytis</label>
+               <br />
+               <input type="radio" name="vyras-moteris" value="vyras" />Vyras
+               <br />
+               <input type="radio" name="vyras-moteris" value="moteris" />Moteris
+               <br />
+            </fieldset>
+            <br />
+            <fieldset>
+               <label for="freetime">
+                  Ką mėgstate veikti laisvalaikiu?
+                  <br />
+                  <input type="checkbox" value="vairuoti" name="freetime" />Vairuoti
+                  <br />
+                  <input type="checkbox" value="kava" name="freetime" />Gerti kavą
+                  <br />
+                  <input type="checkbox" value="desertai" name="freetime" />Valgyti
+                  desertus
+                  <br />
+                  <input type="checkbox" value="miegas" name="freetime" />Miegoti
+                  <br />
+                  <input type="checkbox" value="code" name="freetime" />Programuoti
+                  <br />
+               </label>
+            </fieldset>
+            <label for="time">Kiek vidutiniškai valandų per dieną programuojate?</label>
+            <br />
+            <select name="time" id="time">
+               <option value="0-1h">Iki valandos</option>
+               <option value="1-3h">Nuo 1val. iki 3val.</option>
+               <option value=">3">3val. ir daugiau</option>
+            </select>
+            <br />
+            <input type="hidden" id="custId" name="custId" value="1" />
+            <!-- Ne iki galo suprantu hidden atributo reikšmę -->
+            <input type="submit" value="Pateikti" />
+         </form>
+      </div>
+   </section>
+   <section id="survey-statistic">
+      <div id="table">
+         <p>Pagal šiuo metu turimus duomenis:</p>
+         <table>
+            <tr>
+               <th>Lytis</th>
+               <th>Gimimo metai</th>
+               <th>Mėgstama spalva</th>
+            </tr>
+            <tr>
+               <td>Moteris</td>
+               <td>1991</td>
+               <td>Raudona</td>
+            </tr>
+            <tr>
+               <td>Vyras</td>
+               <td>1992</td>
+               <td>Mėlyna</td>
+            </tr>
+         </table>
+      </div>
+   </section>
+   <footer id="contacts">
+      <p>Kilus neaiškumams kreipkitės:</p>
+      <a href="mailto:my.email@.lt" id="pastas">manopastas@pastas.lt</a>
+   </footer>
+</body>
+</html>
