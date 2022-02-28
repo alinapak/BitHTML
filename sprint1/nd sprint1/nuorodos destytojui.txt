@@ -1,9 +1,0 @@
-puslapio:
-
-https://alinapak.github.io/BitHTML/Sprint1/Pages/blogHomePage.html
-
-Repozitorijos: 
-
-https://github.com/alinapak/BitHTML/tree/main/Sprint1/Pages
-
-
