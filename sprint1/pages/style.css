@@ -31,6 +31,35 @@ ul a {
   padding: 25px;
   font-weight: bold;
 }
+#nav-bar li {
+  width: max-content;
+}
+@media screen and (max-width:750px) {
+  #nav-bar {
+   display:flex;
+   justify-content: stretch;
+  }
+nav ul {
+display:flex;
+flex-direction: column;
+}
+header {
+  margin-top:10em;
+  display: block;
+}
+header p {
+  text-align: center;
+}
+figure {
+  margin:0 auto;
+  width:fit-content;
+}
+/* section.grid kad prieiti prie grid media query? */
+section.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+}
 h2 {
   text-align: center;
 }
