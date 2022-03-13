@@ -39,6 +39,9 @@ ul a {
    display:flex;
    justify-content: stretch;
   }
+  div.flex-item img {
+   display:block;
+  }
 nav ul {
 display:flex;
 flex-direction: column;
@@ -84,11 +87,16 @@ img#photo {
   /* margin:0 auto; */
   float:none;
 }
+
 }
 /* important pre rule for mobile devices */
 pre {
   white-space: pre-wrap;
   word-break: break-all;
+}
+div.flex-item img {
+margin:0 auto;
+width:200px;
 }
 h2 {
   text-align: center;
