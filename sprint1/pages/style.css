@@ -28,7 +28,7 @@ nav ul {
 ul a {
   text-decoration: none;
   color: black;
-  padding: 25px;
+  padding: 1rem;
   font-weight: bold;
 }
 #nav-bar li {
@@ -43,6 +43,9 @@ nav ul {
 display:flex;
 flex-direction: column;
 }
+ul a {
+  padding:0.2rem;
+}
 header {
   margin-top:10em;
   display: block;
@@ -54,11 +57,38 @@ figure {
   margin:0 auto;
   width:fit-content;
 }
-/* section.grid kad prieiti prie grid media query? */
+/* section.grid kad prieiti prie grid media query */
 section.grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
+/* div.content kad prieiti prie grid media queries */
+div.content {
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+div#flex {
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-self: center;
+  align-self: center;
+}
+div.flex-item {
+  width:fit-content;
+}
+div.grid {
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+img#photo {
+  /* margin:0 auto; */
+  float:none;
+}
+}
+/* important pre rule for mobile devices */
+pre {
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 h2 {
   text-align: center;
@@ -130,8 +160,7 @@ width:fit-content;
    justify-content:space-between ;
 }
  .flex-item {
-  
-   width: 50%;
+   width:50%;
    margin-left: 25px;
    margin-right: 25px;
  }
